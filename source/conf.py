@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Sample Project'
+project = 'CIS 320 Writing'
 copyright = '2021'
-author = 'Samantha Simpson'
+author = 'Kole Hicok'
 
 
 # -- General configuration ---------------------------------------------------

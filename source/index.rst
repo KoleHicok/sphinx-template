@@ -1,7 +1,9 @@
-Sample Sphinx Project
-=====================
+Web Security
+============
 
-Fill in  this text with your own intro text
+-- Kole Hicok
+
+Web Security Project
 
 .. toctree::
    :maxdepth: 1
@@ -9,5 +11,6 @@ Fill in  this text with your own intro text
 
    chapter1/index
    chapter2/index
+   bibliography/index
 
 
