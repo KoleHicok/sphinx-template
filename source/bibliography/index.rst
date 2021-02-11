@@ -6,7 +6,8 @@ book covers the basics of implementing and using React.js. I could pull from
 this the general uses of React as a way to create user interfaces, its
 dependencies, and how to make your page react to user and server changes.
 
-.. [#f1] Fedosejev, A., & Bush, A. (2015). React.js Essentials. Packt Publishing.
+.. [#f1] Fedosejev, A., & Bush, A. (2015). React.js Essentials.
+    Packt Publishing.
 
 This article, "React: Facebook's Functional Turn on Writing JavaScript"
 [#f2]_ follows a discussion on why React was needed and created at Facebook. I
