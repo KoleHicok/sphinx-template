@@ -10,5 +10,6 @@ Web Security Writing Project
    :caption: Contents:
 
    bibliography/index
+   outline/index
 
 
