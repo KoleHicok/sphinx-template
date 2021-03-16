@@ -11,5 +11,6 @@ Web Security Writing Project
 
    bibliography/index
    outline/index
+   report/index
 
 
