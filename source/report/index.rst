@@ -6,35 +6,37 @@ An overview of React.js and how it facilitates the creation of a dynamic page.
 
 * Introduction
 
-**Background**
+Background
+----------
 
-React.js was created by Facebook and Instagram architects to allow their
-programmers to create javascript to modify a web page more intuitively. Since
-typical web page manipulation requires knowledge of the Document Object Model
-(the DOM) and odd method calls for that manipulation. Many companies, such as
-Facebook, Instagram, and Netflix, all use React because it is fast and easy to
-use. These companies use React because it is easier for programmers to
-understand for a couple reasons.([#f3]_) Firstly, with no need for direct DOM
-interaction, programmers can use JavaScript methods to do the work for them.
-This results in a one-way data transfer so the programmer does not need to focus
-on what the DOM is reacting with. Secondly, this lower entry knowledge means
-companies need to spend less time training new hires and can spend more time
-developing new services.
+React.js was created to make web development more intuitive. React.js was
+developed by Facebook and Instagram software architects to ease web page
+modification via JavaScript. Typical web page manipulation requires
+knowledge of the **Document Object Model** (DOM) and method calls that
+manipulate the DOM. These methods often run slow and confuse most programmers.
 
-When programming in React, there are a few basic concepts that allow for such
-easy construction and manipulation of reactive UI's. The main building blocks of
-React are elements and components. Elements are pieces of code that represent
-the changes that need to be made to the DOM. These are often written in
-JavaScript XML (or JSX) to make the code more readable and HTML-esque. These
+Many companies, such as Facebook, Instagram, and Netflix, all use React because
+it is fast and easy to use. This is because it is easier for programmers to
+understand.([#f3]_) With no need for direct DOM interaction,
+programmers can use JavaScript methods to do the work for them. This results in
+a one-way data transfer. With this, the programmer can focus on their design
+instead of the DOM's processes. This means companies spend less time training
+new hires and more time developing new services.
+
+When programming in React, there are a few concepts that allow easy construction
+and manipulation of the user interface. The main building blocks of
+React are **elements** and **components**. Elements are pieces of code that represent
+changes that need to be made to the DOM. These are often written in
+**JavaScript XML** (JSX) to make the code more readable and HTML-esque. These
 elements are then rendered through components that make up the page. Components
 are like functions that tell a browser how and where to load the page elements.
-JSX is important as it simplifies the code from a method call for each element,
-and breaks it down into tags that are easy and intuitive to understand.([#f1]_)
-By combining these concepts, the creation of a dynamic and reactive web page
-becomes a matter of adding elements written in JSX to a component that we then
-render to the DOM using React's built in render() method. This streamlined
-process is why large companies and individual developers alike use React for
-better user and programmer experiences.
+
+JSX is important as it simplifies the code from a method call for each element to
+easy to use and understandable tags.([#f1]_) By combining these concepts, the
+creation of a dynamic and reactive web page becomes a matter of adding elements
+written in JSX to a component. We then render to the DOM using React's built in
+`render()` method. This streamlined process allows companies and developers to
+implement React for better a user and programmer experience.
 
 * Advantages of React
 
