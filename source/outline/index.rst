@@ -1,8 +1,11 @@
 React.js Outline
 ================
 
-**Thesis:** How to use React.js
-React.js enables the creation of a reactive and dynamic web page.
+**Thesis:** How to use React.js and React.js enables the creation of
+dynamic web page.
+
+**Revised Thesis:** This is an overview of React.js and how it facilitates the creation
+of a dynamic page.
 
 * Background
 
