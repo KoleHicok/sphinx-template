@@ -119,8 +119,8 @@ is a large part of what makes UIs easier to create expand upon in the framework.
 The components created are the blueprint for elements that will be used in the
 future. A component can be written as a function or a class that extends the
 ``React.Component`` class.([#f6]_) This flexibility in notation allows for those
-with different tastes and styles to still use React.js comfortably. These
-notations look like such:
+with different tastes and styles to still use React.js comfortably. The following
+examples would represent a paragraph tag using the specified font and child text:
 
 .. code-block:: JavaScript
 
@@ -128,7 +128,7 @@ notations look like such:
     const Paragraph = ({ children, font }) => ({
         type: 'paragraph',
         props: {
-            className: 'body-paragraph paragraph-' + paragraph,
+            className: 'body-paragraph paragraph-' + font,
             children: {
                 type: 'p',
                 props: {
