@@ -205,8 +205,8 @@ The previous example of a paragraph can be simplified to this:
         }
     }
 
-As you can see, this notation is far easier to read and understand than the object
-notation in the previous example.
+As you can see, this notation is easier to read and understand than the object
+notation in the previous example if you already know HTML.
 
 Rendering Elements
 ------------------
