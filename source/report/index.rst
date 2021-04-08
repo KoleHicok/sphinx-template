@@ -1,9 +1,6 @@
 React.js Report
 ===============
 
-**Thesis:** This is an overview of React.js and how it facilitates the creation
-of a dynamic page.
-
 Introduction
 ------------
 
@@ -14,6 +11,10 @@ pleasant user experience. React.js is a powerful JavaScript framework that allow
 a web developer to manipulate a web page as the user uses the website. React.js
 facilitates this creation of a dynamic web page. This report will discuss the
 React.js and how it makes dynamic UI development more accessible.
+
+.. image:: ../images/reactLogo.png
+  :width: 400
+  :alt: React.js's Logo
 
 Background
 ----------
@@ -44,7 +45,7 @@ JSX is important as it simplifies the code from a method call for each element t
 easy to use and understandable tags.([#f1]_) By combining these concepts, the
 creation of a dynamic and reactive web page becomes a matter of adding components
 written in JSX to an element. We then render to the DOM using React's built in
-`render()` method. This streamlined process allows companies and developers to
+``render()`` method. This streamlined process allows companies and developers to
 implement React for better a user and programmer experience.
 
 Advantages of React.js
@@ -64,7 +65,7 @@ keeps potentially malicious code from being executed. This helps prevent the use
 from executing scripts on your site and causing harm.
 
 Third, React.js allows for easier live updates to your UI. When a change is made,
-the programmer simply makes a `render()` method call with your changed component.
+the programmer simply makes a ``render()`` method call with your changed component.
 React.js finds the differences and applies the needed changes to the DOM. This
 simplifies UI updates and the code needed for those updates. These changes remain
 efficient as React.js only applied changes to the DOM. The unedited part of the
@@ -90,7 +91,7 @@ the differences between these two representations. The changes between the two
 virtual DOMs are then applied to the real DOM.
 
 The searching and changing all happens behind the scenes. This is because the
-process only needs a `render()` call and parameters containing the component to
+process only needs a ``render()`` call and parameters containing the component to
 render. React.js takes it from there. This simplification makes life easier for
 a JavaScript programmer. Instead of learning about DOM calls and modifications,
 they can simply use JSX's HTML-like syntax.
@@ -117,7 +118,7 @@ Encapsulation is an important part of programming in React.js. This encapsulatio
 is a large part of what makes UIs easier to create expand upon in the framework.
 The components created are the blueprint for elements that will be used in the
 future. A component can be written as a function or a class that extends the
-`React.Component` class.([#f6]_) This flexibility in notation allows for those
+``React.Component`` class.([#f6]_) This flexibility in notation allows for those
 with different tastes and styles to still use React.js comfortably. These
 notations look like such:
 
@@ -167,7 +168,7 @@ JavaScript  XML (JSX)
 Component creation can be further simplified with the use of JavaScript XML.
 **JavaScript XML** (JSX) is a mark-up language that simplifies React.js
 objects.([#f5]_) It does this through its syntax that resembles HTML. The
-programmer doesn't have to understand React.createElement or React.js's object
+programmer doesn't have to understand ``React.createElement`` or React.js's object
 notation. Instead, the HTML you already know can be used in JavaScript files to
 create objects. This lowers the learning barrier for using React.js and make the
 code easier to read.
@@ -178,13 +179,13 @@ syntax between languages, such as JSX and React.js. Babel even has a preset for
 React.js that automatically sets up for this translation. Using Babel is as easy
 as importing it through a script tag. This can be come from a site such as
 unpkg.com.([#f4]_) Once you do this, Babel will automatically translate you JSX
-into a `React.createElement` method call with the proper parameters.
+into a ``React.createElement`` method call with the proper parameters.
 
 So why do we need to do all of the extra configuration to use JSX? JSX allows
 you to run JavaScript code as you create your tags. This is done using curly
-bracket ({}) notation.([#f4]_) This is because Babel will not modify any text
+bracket (``{}``) notation.([#f4]_) This is because Babel will not modify any text
 within curly brackets. This allows access to variables and computations as you
-create components and elements. Using a ${} notation gives you this same
+create components and elements. Using a ``${}`` notation gives you this same
 functionality from within a string. This makes code even more readable and
 understandable for those programming and reading the code.
 
@@ -212,9 +213,9 @@ Rendering Elements
 
 Once you are ready to render your UI to the DOM for the user to see, its time to
 create elements and render them. Elements can be created in either of the
-aforementioned ways, either by using the `React.createElement()` method or by
-using JSX as a parameter for a `render()` method call. These methods convert the
-given parameters into a JSON representation of the element that the `render()`
+aforementioned ways, either by using the ``React.createElement()`` method or by
+using JSX as a parameter for a ``render()`` method call. These methods convert the
+given parameters into a JSON representation of the element that the ``render()``
 method can use. This JSON representation contains the type of HTML tag and a
 sub-object called props.
 
@@ -225,8 +226,8 @@ using JSX to make your elements. While the nested structure is easy to make, the
 DOM changes can be more complex figures and designs to make the user experience
 better.
 
-The resulting JSON object is what React.js uses to render the UI. It first locates where
-on the UI the element will go. Then, a new virtual DOM is rendered to compare
+The resulting JSON object is what React.js uses to render the UI. It first locates
+where on the UI the element will go. Then, a new virtual DOM is rendered to compare
 with the previous version. This comparison results in the specific changes needed
 to update the real DOM. These changes are then applied to the DOM and the UI is
 updated. This one way flow of information is much easier for programmers to

@@ -363,97 +363,219 @@ ul.auto-toc {
 <div class="document" id="react-js-report">
 <h1 class="title">React.js Report</h1>
 
-<p><strong>Thesis:</strong> React.js
-An overview of React.js and how it facilitates the creation of a dynamic page.</p>
-<ul class="simple">
-<li>Introduction</li>
-</ul>
-<p><strong>Background</strong></p>
-<p>React.js was created by Facebook and Instagram architects to allow their
-programmers to create javascript to modify a web page more intuitively. Since
-typical web page manipulation requires knowledge of the Document Object Model
-(the DOM) and odd method calls for that manipulation. Many companies, such as
-Facebook, Instagram, and Netflix, all use React because it is fast and easy to
-use. These companies use React because it is easier for programmers to
-understand for a couple reasons.(<a class="footnote-reference" href="#f3" id="id1">[3]</a>) Firstly, with no need for direct DOM
-interaction, programmers can use JavaScript methods to do the work for them.
-This results in a one-way data transfer so the programmer does not need to focus
-on what the DOM is reacting with. Secondly, this lower entry knowledge means
-companies need to spend less time training new hires and can spend more time
-developing new services.</p>
-<p>When programming in React, there are a few basic concepts that allow for such
-easy construction and manipulation of reactive UI's. The main building blocks of
-React are elements and components. Elements are pieces of code that represent
-the changes that need to be made to the DOM. These are often written in
-JavaScript XML (or JSX) to make the code more readable and HTML-esque. These
-elements are then rendered through components that make up the page. Components
-are like functions that tell a browser how and where to load the page elements.
-JSX is important as it simplifies the code from a method call for each element,
-and breaks it down into tags that are easy and intuitive to understand.(<a class="footnote-reference" href="#f1" id="id2">[1]</a>)
-By combining these concepts, the creation of a dynamic and reactive web page
-becomes a matter of adding elements written in JSX to a component that we then
-render to the DOM using React's built in render() method. This streamlined
-process is why large companies and individual developers alike use React for
-better user and programmer experiences.</p>
-<ul class="simple">
-<li>Advantages of React<ul>
-<li>Abstractions in components (<a class="footnote-reference" href="#f3" id="id3">[3]</a>)</li>
-<li>Easier modular code</li>
-<li>More secure from XSS</li>
-<li>Easy site updates<ul>
-<li>Render method calls</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>What is the virtual DOM<ul>
-<li>Document Object Model created on render of a web page</li>
-<li>JavaScript can modify the DOM, but slowly and confusingly</li>
-<li>React uses a virtual DOM stored in RAM to make quick adjustments<ul>
-<li>Finds differences between the current and previous virtual DOMs</li>
-<li>Applies those changes in the real DOM</li>
-</ul>
-</li>
-<li>This makes DOM changes quick and easy<ul>
-<li>Only changes what's needed</li>
-<li>Don't need to know what exactly needs to be changed in DOM</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Creating Elements<ul>
-<li>What are Elements?<ul>
-<li>Similar to a class that contains the code to build HTML</li>
-</ul>
-</li>
-<li>Elements are the instructions for component creation</li>
-<li>Creating Elements using React.createElement</li>
-<li>Element Children<ul>
-<li>Can contain other HTML tags for more complex page creation</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>JSX<ul>
-<li>What is JSX (<a class="footnote-reference" href="#f5" id="id4">[5]</a>)</li>
-<li>How does JSX simplify element creation</li>
-<li>Translate JSX into React.create using Babel (<a class="footnote-reference" href="#f4" id="id5">[4]</a>)</li>
-<li>Using JavaScript inside of JSX (<a class="footnote-reference" href="#f4" id="id6">[4]</a>) (Code snippet with {} notation)</li>
-</ul>
-</li>
-<li>Rendering Components with Elements<ul>
-<li>JSON object containing a type of HTML tag</li>
-<li>Props sub object for the attributes of the tag</li>
-<li>Components are similar to a class that contains elements</li>
-<li>This component is what is rendered into the virtual DOM<ul>
-<li>Once rendered, React then applies the changes to the DOM</li>
-<li>Creates a one way flow of creation (<a class="footnote-reference" href="#f2" id="id7">[2]</a>)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Conclusion</li>
-</ul>
+<div class="section" id="introduction">
+<h1>Introduction</h1>
+<p>Modern web pages demand modern user interfaces. Creating a modern user
+interfaces (UI) is a difficult task. Along with the design of the UI, updating
+that UI with information and reacting to user input makes for a more dynamic and
+pleasant user experience. React.js is a powerful JavaScript framework that allows
+a web developer to manipulate a web page as the user uses the website. React.js
+facilitates this creation of a dynamic web page. This report will discuss the
+React.js and how it makes dynamic UI development more accessible.</p>
+<img alt="React.js's Logo" src="../images/reactLogo.png" style="width: 400px;" />
+</div>
+<div class="section" id="background">
+<h1>Background</h1>
+<p>React.js was created to make web development more intuitive. React.js was
+developed by Facebook and Instagram software architects to ease web page
+modification via JavaScript. Typical UI manipulation requires
+knowledge of the <strong>Document Object Model</strong> (DOM) and method calls that
+manipulate the DOM. These methods often run slowly and confuse most programmers.</p>
+<p>Many companies, such as Facebook, Instagram, and Netflix, all use React because
+it is fast and easy to use. This is because it is easier for programmers to
+understand.(<a class="footnote-reference" href="#f3" id="id1">[3]</a>) With no need for direct DOM interaction,
+programmers can use JavaScript methods to do the work for them. This results in
+a one-way data transfer. With this, the programmer can focus on their design
+instead of the DOM's processes. This means companies spend less time training
+new hires and more time developing new services.</p>
+<p>When programming in React, there are a few concepts that allow easy construction
+and manipulation of the user interface. The main building blocks of
+React are <strong>elements</strong> and <strong>components</strong>. Elements are pieces of code that represent
+changes that need to be made to the DOM. These are often written in
+<strong>JavaScript XML</strong> (JSX) to make the code more readable and HTML-esque. These
+elements are made up of components that provide functionality to elements. Components
+are like functions that tell a browser how and where to load the page elements.</p>
+<p>JSX is important as it simplifies the code from a method call for each element to
+easy to use and understandable tags.(<a class="footnote-reference" href="#f1" id="id2">[1]</a>) By combining these concepts, the
+creation of a dynamic and reactive web page becomes a matter of adding components
+written in JSX to an element. We then render to the DOM using React's built in
+<tt class="docutils literal">render()</tt> method. This streamlined process allows companies and developers to
+implement React for better a user and programmer experience.</p>
+</div>
+<div class="section" id="advantages-of-react-js">
+<h1>Advantages of React.js</h1>
+<p>So why should you use React.js? There are a few major benefits. First,
+abstractions allow for a more modular design. You can create
+reusable UI components as a class. These classes then create components
+in your elements. In React.js, you can build your own abstractions, rather
+than having them predefined. With a modular design, repeated or similar components
+are easier to use within your site. This allows more flexibility and control over
+the UI.</p>
+<p>Second, React.js is more secure against <strong>Cross-Site Scripting</strong> (XSS) attacks.
+This is because React.js natively escapes string variables.(<a class="footnote-reference" href="#f3" id="id3">[3]</a>) Escaping strings
+keeps potentially malicious code from being executed. This helps prevent the user
+from executing scripts on your site and causing harm.</p>
+<p>Third, React.js allows for easier live updates to your UI. When a change is made,
+the programmer simply makes a <tt class="docutils literal">render()</tt> method call with your changed component.
+React.js finds the differences and applies the needed changes to the DOM. This
+simplifies UI updates and the code needed for those updates. These changes remain
+efficient as React.js only applied changes to the DOM. The unedited part of the
+UI remain untouched. This reduces the processing needed for any changes,
+especially smaller changes.</p>
+</div>
+<div class="section" id="the-virtual-dom">
+<h1>The Virtual DOM</h1>
+<p>The <strong>Document Object Model</strong> (DOM) is a digital representation of a web page.
+This representation is created as a web page is rendered in a browser. This
+representation is what the computer uses to display a web page. Since the DOM is
+created on loading a page, live changes to the DOM require JavaScript methods.
+Typically these calls require specific and confusing method calls. These
+methods make modifications confusing and unintuitive.</p>
+<p>This is where React.js's virtual DOM comes into play. Firstly, using the virtual
+DOM is more efficient because it is stored in the RAM. This faster access to data
+makes modifications and adjustments faster. React.js is made even faster by how
+those changes are made. When React.js renders a change, it first creates a new
+virtual DOM. This is then compared to the previous virtual DOM. React.js finds
+the differences between these two representations. The changes between the two
+virtual DOMs are then applied to the real DOM.</p>
+<p>The searching and changing all happens behind the scenes. This is because the
+process only needs a <tt class="docutils literal">render()</tt> call and parameters containing the component to
+render. React.js takes it from there. This simplification makes life easier for
+a JavaScript programmer. Instead of learning about DOM calls and modifications,
+they can simply use JSX's HTML-like syntax.</p>
+<p>Having a program find and make changes may seem less efficient than manual
+changes, but React.js is still quite efficient. This is primarily thanks to the
+virtual DOM system. Since only the needed changes are applied to the DOM, the
+whole process is quite fast. Finding the differences in the virtual DOM is fast
+too as the virtual DOM is stored in RAM for faster access. Each of these factors
+is why React.js is a highly efficient and easy to use language thanks to the
+virtual DOM.</p>
+</div>
+<div class="section" id="creating-components">
+<h1>Creating Components</h1>
+<p>So what are these components? They are what allow for the modular and abstracted
+UIs React.js can create. Components are similar to a class that <strong>encapsulates</strong>
+an element you want to create. Encapsulation is the process of creating a generalized
+version of an object that can be modified to satisfy different requirements. By
+encapsulating the more complex creation of your elements, you can easily create
+many similar elements for different needs.</p>
+<p>Encapsulation is an important part of programming in React.js. This encapsulation
+is a large part of what makes UIs easier to create expand upon in the framework.
+The components created are the blueprint for elements that will be used in the
+future. A component can be written as a function or a class that extends the
+<tt class="docutils literal">React.Component</tt> class.(<a class="footnote-reference" href="#f6" id="id4">[6]</a>) This flexibility in notation allows for those
+with different tastes and styles to still use React.js comfortably. These
+notations look like such:</p>
+<pre class="code JavaScript literal-block">
+<span class="comment single">// Component as a function
+</span><span class="keyword reserved">const</span> <span class="name other">Paragraph</span> <span class="operator">=</span> <span class="punctuation">({</span> <span class="name other">children</span><span class="punctuation">,</span> <span class="name other">font</span> <span class="punctuation">})</span> <span class="punctuation">=&gt;</span> <span class="punctuation">({</span>
+    <span class="name other">type</span><span class="operator">:</span> <span class="literal string single">'paragraph'</span><span class="punctuation">,</span>
+    <span class="name other">props</span><span class="operator">:</span> <span class="punctuation">{</span>
+        <span class="name other">className</span><span class="operator">:</span> <span class="literal string single">'body-paragraph paragraph-'</span> <span class="operator">+</span> <span class="name other">paragraph</span><span class="punctuation">,</span>
+        <span class="name other">children</span><span class="operator">:</span> <span class="punctuation">{</span>
+            <span class="name other">type</span><span class="operator">:</span> <span class="literal string single">'p'</span><span class="punctuation">,</span>
+            <span class="name other">props</span><span class="operator">:</span> <span class="punctuation">{</span>
+                <span class="name other">children</span><span class="operator">:</span> <span class="name other">children</span>
+            <span class="punctuation">}</span>
+        <span class="punctuation">}</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">});</span>
+
+<span class="comment single">// Components as a class
+</span><span class="keyword reserved">class</span> <span class="name other">Paragraph</span> <span class="keyword reserved">extends</span> <span class="name other">React</span><span class="punctuation">.</span><span class="name other">Component</span> <span class="punctuation">{</span>
+    <span class="name other">render</span><span class="punctuation">()</span> <span class="punctuation">{</span>
+        <span class="keyword reserved">const</span> <span class="punctuation">{</span><span class="name other">children</span><span class="punctuation">,</span> <span class="name other">font</span><span class="punctuation">}</span> <span class="operator">=</span> <span class="keyword">this</span><span class="punctuation">.</span><span class="name other">props</span><span class="punctuation">;</span>
+        <span class="keyword">return</span> <span class="punctuation">{</span>
+            <span class="name other">type</span><span class="operator">:</span> <span class="literal string single">'paragraph'</span><span class="punctuation">,</span>
+            <span class="name other">props</span><span class="operator">:</span> <span class="punctuation">{</span>
+                <span class="name other">className</span><span class="operator">:</span> <span class="literal string single">'body-paragraph paragraph-'</span> <span class="operator">+</span> <span class="name other">font</span><span class="punctuation">,</span>
+                <span class="name other">children</span><span class="operator">:</span> <span class="punctuation">{</span>
+                    <span class="name other">type</span><span class="operator">:</span> <span class="literal string single">'p'</span><span class="punctuation">,</span>
+                    <span class="name other">props</span><span class="operator">:</span> <span class="punctuation">{</span>
+                        <span class="name other">children</span><span class="operator">:</span> <span class="name other">children</span>
+                    <span class="punctuation">}</span>
+                <span class="punctuation">}</span>
+            <span class="punctuation">}</span>
+        <span class="punctuation">};</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+</pre>
+<p>These two components, written in different styles, produce the same paragraph
+with a different font and text in the paragraph tag. This allows a programmer to
+use React.js in a way that is comfortable for them. This encapsulation makes UI
+creation simple and modular.</p>
+</div>
+<div class="section" id="javascript-xml-jsx">
+<h1>JavaScript  XML (JSX)</h1>
+<p>Component creation can be further simplified with the use of JavaScript XML.
+<strong>JavaScript XML</strong> (JSX) is a mark-up language that simplifies React.js
+objects.(<a class="footnote-reference" href="#f5" id="id5">[5]</a>) It does this through its syntax that resembles HTML. The
+programmer doesn't have to understand <tt class="docutils literal">React.createElement</tt> or React.js's object
+notation. Instead, the HTML you already know can be used in JavaScript files to
+create objects. This lowers the learning barrier for using React.js and make the
+code easier to read.</p>
+<p>Since JSX is not actual JavaScript, we will need a translator to interpret the
+JSX. A popular option for this is Babel. Babel is a compiler that can transform
+syntax between languages, such as JSX and React.js. Babel even has a preset for
+React.js that automatically sets up for this translation. Using Babel is as easy
+as importing it through a script tag. This can be come from a site such as
+unpkg.com.(<a class="footnote-reference" href="#f4" id="id6">[4]</a>) Once you do this, Babel will automatically translate you JSX
+into a <tt class="docutils literal">React.createElement</tt> method call with the proper parameters.</p>
+<p>So why do we need to do all of the extra configuration to use JSX? JSX allows
+you to run JavaScript code as you create your tags. This is done using curly
+bracket (<tt class="docutils literal">{}</tt>) notation.(<a class="footnote-reference" href="#f4" id="id7">[4]</a>) This is because Babel will not modify any text
+within curly brackets. This allows access to variables and computations as you
+create components and elements. Using a <tt class="docutils literal">${}</tt> notation gives you this same
+functionality from within a string. This makes code even more readable and
+understandable for those programming and reading the code.</p>
+<p>The previous example of a paragraph can be simplified to this:</p>
+<pre class="code JavaScript literal-block">
+<span class="keyword reserved">class</span> <span class="name other">Paragraph</span> <span class="keyword reserved">extends</span> <span class="name other">React</span><span class="punctuation">.</span><span class="name other">Component</span> <span class="punctuation">{</span>
+    <span class="name other">render</span><span class="punctuation">()</span> <span class="punctuation">{</span>
+        <span class="keyword reserved">const</span> <span class="punctuation">{</span><span class="name other">children</span><span class="punctuation">,</span> <span class="name other">font</span><span class="punctuation">}</span> <span class="operator">=</span> <span class="keyword">this</span><span class="punctuation">.</span><span class="name other">props</span><span class="punctuation">;</span>
+        <span class="keyword declaration">let</span> <span class="name other">element</span> <span class="operator">=</span> <span class="punctuation">(</span>
+            <span class="operator">&lt;</span><span class="name other">p</span> <span class="name other">className</span> <span class="operator">=</span> <span class="literal string backtick">`body-paragraph paragraph-</span><span class="literal string interpol">${</span><span class="name other">font</span><span class="literal string interpol">}</span><span class="literal string backtick">`</span><span class="operator">&gt;</span>
+                <span class="punctuation">{</span><span class="name other">children</span><span class="punctuation">}</span>
+            <span class="operator">&lt;</span><span class="error">/p&gt;</span>
+        <span class="punctuation">);</span>
+        <span class="keyword">return</span> <span class="name other">element</span><span class="punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+</pre>
+<p>As you can see, this notation is far easier to read and understand than the object
+notation in the previous example.</p>
+</div>
+<div class="section" id="rendering-elements">
+<h1>Rendering Elements</h1>
+<p>Once you are ready to render your UI to the DOM for the user to see, its time to
+create elements and render them. Elements can be created in either of the
+aforementioned ways, either by using the <tt class="docutils literal">React.createElement()</tt> method or by
+using JSX as a parameter for a <tt class="docutils literal">render()</tt> method call. These methods convert the
+given parameters into a JSON representation of the element that the <tt class="docutils literal">render()</tt>
+method can use. This JSON representation contains the type of HTML tag and a
+sub-object called props.</p>
+<p>The props object contains information about the tag (id, className, etc.) and
+the children of that tag. Elements can be made more complex HTML structures using
+the props object. These nested tags are fairly simple to make, especially when
+using JSX to make your elements. While the nested structure is easy to make, the
+DOM changes can be more complex figures and designs to make the user experience
+better.</p>
+<p>The resulting JSON object is what React.js uses to render the UI. It first locates where
+on the UI the element will go. Then, a new virtual DOM is rendered to compare
+with the previous version. This comparison results in the specific changes needed
+to update the real DOM. These changes are then applied to the DOM and the UI is
+updated. This one way flow of information is much easier for programmers to
+understand and requires less knowledge about DOM operations.(<a class="footnote-reference" href="#f2" id="id8">[2]</a>) React.js
+takes care of those operations for the programmer.</p>
+</div>
+<div class="section" id="conclusion">
+<h1>Conclusion</h1>
+<p>In the end, React.js is a simple and effective way to make dynamic and
+interesting user interfaces. Through the use of components, elements, and JSX,
+a web developer can achieve professional results without the added confusion of
+the DOM. After gaining a basic understanding of the language, dynamic interfaces
+can easily be updated with easy to read and understand code. These are all reasons
+why React.js is a powerful tool for the creation and updating of user interfaces.</p>
 <table class="docutils footnote" frame="void" id="f1" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
@@ -464,7 +586,7 @@ Packt Publishing.</td></tr>
 <table class="docutils footnote" frame="void" id="f2" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id7">[2]</a></td><td>Hunt, P., Oâ€™Shannessy, P., Smith, D., &amp; Coatta, T. (2016). React:
+<tr><td class="label"><a class="fn-backref" href="#id8">[2]</a></td><td>Hunt, P., Oâ€™Shannessy, P., Smith, D., &amp; Coatta, T. (2016). React:
 Facebookâ€™s Functional Turn on Writing JavaScript. Communications of the ACM,
 59(12), 56â€“62. <a class="reference external" href="https://doi.org/10.1145/2980991">https://doi.org/10.1145/2980991</a></td></tr>
 </tbody>
@@ -479,7 +601,7 @@ Facebookâ€™s Functional Turn on Writing JavaScript. Communications of the A
 <table class="docutils footnote" frame="void" id="f4" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[4]</td><td><em>(<a class="fn-backref" href="#id5">1</a>, <a class="fn-backref" href="#id6">2</a>)</em> Dodds, K. C. (2018, September 18). The introduction to React you've
+<tr><td class="label">[4]</td><td><em>(<a class="fn-backref" href="#id6">1</a>, <a class="fn-backref" href="#id7">2</a>)</em> Dodds, K. C. (2018, September 18). The introduction to React you've
 been missing. Lecture presented at 2018 UtahJS Conference. Retrieved
 February 10, 2021, from <a class="reference external" href="https://www.youtube.com/watch?v=SAIdyBFHfVU">https://www.youtube.com/watch?v=SAIdyBFHfVU</a></td></tr>
 </tbody>
@@ -487,11 +609,20 @@ February 10, 2021, from <a class="reference external" href="https://www.youtube.
 <table class="docutils footnote" frame="void" id="f5" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id4">[5]</a></td><td>Chavan, Y. (2021, February 01). JSX in REACT â€“ explained with examples.
+<tr><td class="label"><a class="fn-backref" href="#id5">[5]</a></td><td>Chavan, Y. (2021, February 01). JSX in REACT â€“ explained with examples.
 Retrieved February 11, 2021, from
 <a class="reference external" href="https://www.freecodecamp.org/news/jsx-in-react-introduction/">https://www.freecodecamp.org/news/jsx-in-react-introduction/</a></td></tr>
 </tbody>
 </table>
+<table class="docutils footnote" frame="void" id="f6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[6]</a></td><td>Abramov, D. (2015, December 18). React components, elements, and
+Instances â€“ React blog. Retrieved April 05, 2021, from
+<a class="reference external" href="https://reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html">https://reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html</a></td></tr>
+</tbody>
+</table>
+</div>
 </div>
 </body>
 </html>
