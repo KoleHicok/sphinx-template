@@ -1,16 +1,14 @@
 React.js Report
 ===============
 
-Introduction
-------------
-
-Modern web pages demand modern user interfaces. Creating a modern user
-interfaces (UI) is a difficult task. Along with the design of the UI, updating
-that UI with information and reacting to user input makes for a more dynamic and
-pleasant user experience. React.js is a powerful JavaScript framework that allows
-a web developer to manipulate a web page as the user uses the website. React.js
-facilitates this creation of a dynamic web page. This report will discuss the
-React.js and how it makes dynamic UI development more accessible.
+Creating a user interface (UI) is a difficult task. React.js makes web apps look
+good with minimal effort. The web page becomes dynamic through animated feedback
+to user input, making site navigation more interesting. It can also easily
+display content from the server. React.js is a powerful JavaScript
+framework that allows a web developer to manipulate a web page as the user uses
+the website. React.js facilitates this creation of a single web page app, rather
+than a set of pages the user navigates through. This report will discuss the
+React.js and how it aids in the development of dynamic UI.
 
 .. image:: ../images/reactLogo.png
   :width: 400
@@ -23,15 +21,16 @@ React.js was created to make web development more intuitive. React.js was
 developed by Facebook and Instagram software architects to ease web page
 modification via JavaScript. Typical UI manipulation requires
 knowledge of the **Document Object Model** (DOM) and method calls that
-manipulate the DOM. These methods often run slowly and confuse most programmers.
+manipulate the DOM. These methods often run slowly as they refresh the entire DOM
+and less than intuitive.
 
 Many companies, such as Facebook, Instagram, and Netflix, all use React because
 it is fast and easy to use. This is because it is easier for programmers to
 understand.([#f3]_) With no need for direct DOM interaction,
 programmers can use JavaScript methods to do the work for them. This results in
-a one-way data transfer. With this, the programmer can focus on their design
-instead of the DOM's processes. This means companies spend less time training
-new hires and more time developing new services.
+a one-way data transfer from the script to the DOM. With this, the programmer
+can focus on their design instead of the DOM attributes. This means companies
+spend less time training new hires and more time developing new services.
 
 When programming in React, there are a few concepts that allow easy construction
 and manipulation of the user interface. The main building blocks of
@@ -83,12 +82,13 @@ Typically these calls require specific and confusing method calls. These
 methods make modifications confusing and unintuitive.
 
 This is where React.js's virtual DOM comes into play. Firstly, using the virtual
-DOM is more efficient because it is stored in the RAM. This faster access to data
-makes modifications and adjustments faster. React.js is made even faster by how
-those changes are made. When React.js renders a change, it first creates a new
-virtual DOM. This is then compared to the previous virtual DOM. React.js finds
-the differences between these two representations. The changes between the two
-virtual DOMs are then applied to the real DOM.
+DOM is more efficient because of how it modifies the DOM. Typically, a change to
+the DOM requires emptying and rebuilding of the entire DOM. This can cause a
+flicker on the screen while the DOM is empty. When React.js renders a change, it
+first creates a new virtual DOM. This is then compared to the previous virtual
+DOM. React.js finds the differences between these two representations. The
+changes between the two virtual DOMs are then applied to the real DOM,
+preventing a refresh and the aforementioned screen flicker.
 
 The searching and changing all happens behind the scenes. This is because the
 process only needs a ``render()`` call and parameters containing the component to
@@ -191,7 +191,7 @@ understandable for those programming and reading the code.
 
 The previous example of a paragraph can be simplified to this:
 
-.. code-block:: JavaScript
+.. code-block:: jsx
 
     class Paragraph extends React.Component {
         render() {
