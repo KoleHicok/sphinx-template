@@ -1,5 +1,5 @@
-React.js Report
-===============
+Using React.js For More Dynamic Web Pages
+=========================================
 
 Creating a user interface (UI) is a difficult task. React.js makes web apps look
 good with minimal effort. The web page becomes dynamic through animated feedback
@@ -40,6 +40,18 @@ changes that need to be made to the DOM. These are often written in
 elements are made up of components that provide functionality to elements. Components
 are like functions that tell a browser how and where to load the page elements.
 
+.. code-block:: JavaScript
+
+    // Without React.js and JSX
+    document.addEventListener("DOMContentLoaded", function(event) {
+        var paragraph = document.createParagraphElement();
+        paragraph.innerText = "Hello World!";
+        document.querySelector(".container").appendChild(paragraph);
+    }
+
+    // With React.js and JSX
+    ReactDOM.render(<p>Hello World!</p>, document.getElementByID('root'));
+
 JSX is important as it simplifies the code from a method call for each element to
 easy to use and understandable tags.([#f1]_) By combining these concepts, the
 creation of a dynamic and reactive web page becomes a matter of adding components
@@ -56,20 +68,22 @@ reusable UI components as a class. These classes then create components
 in your elements. In React.js, you can build your own abstractions, rather
 than having them predefined. With a modular design, repeated or similar components
 are easier to use within your site. This allows more flexibility and control over
-the UI.
+the UI. It also eases the creation of repetitive UI elements
 
 Second, React.js is more secure against **Cross-Site Scripting** (XSS) attacks.
 This is because React.js natively escapes string variables.([#f3]_) Escaping strings
 keeps potentially malicious code from being executed. This helps prevent the user
-from executing scripts on your site and causing harm.
+from executing scripts on your site and causing harm. While it is still a good
+idea to sanitize all data, this is an added safe guard against such attacks.
 
 Third, React.js allows for easier live updates to your UI. When a change is made,
 the programmer simply makes a ``render()`` method call with your changed component.
 React.js finds the differences and applies the needed changes to the DOM. This
 simplifies UI updates and the code needed for those updates. These changes remain
-efficient as React.js only applied changes to the DOM. The unedited part of the
+efficient as React.js only applies the changes to the DOM. The unedited part of the
 UI remain untouched. This reduces the processing needed for any changes,
-especially smaller changes.
+especially smaller changes. Along with this, the user experience is smoother as
+there is no screen flicker when the DOM is emptied and repopulated.
 
 The Virtual DOM
 ---------------
@@ -160,7 +174,7 @@ examples would represent a paragraph tag using the specified font and child text
 These two components, written in different styles, produce the same paragraph
 with a different font and text in the paragraph tag. This allows a programmer to
 use React.js in a way that is comfortable for them. This encapsulation makes UI
-creation simple and modular.
+creation simple and modular once it is in place.
 
 JavaScript  XML (JSX)
 ---------------------
@@ -206,7 +220,7 @@ The previous example of a paragraph can be simplified to this:
     }
 
 As you can see, this notation is easier to read and understand than the object
-notation in the previous example if you already know HTML.
+notation in the previous example.
 
 Rendering Elements
 ------------------
