@@ -6,12 +6,12 @@ engage the user with minimal effort. The web page becomes dynamic through
 animated feedback to user input, making site navigation more interesting. It can
 also easily display content from the server. This powerful JavaScript framework
 allows a web developer to manipulate a web page as the user uses the website.
-React.js facilitates the creation of a single-web page app, rather than a set of
+React.js enables the creation of a single-page web app, rather than a set of
 pages the user navigates through. Here we discuss React.js and how it aids in the
 development of a dynamic UI.
 
 .. image:: ../images/reactLogo.png
-  :width: 400
+  :width: 45%
   :alt: React.js's Logo
 
 Background
@@ -42,6 +42,7 @@ are like functions that tell a browser how and where to load the page elements.
 
 .. code-block:: JavaScript
     :linenos:
+    :caption: A comparison of using native JavaScript vs. React.js and JSX
 
     // Without React.js and JSX
     document.addEventListener("DOMContentLoaded", function(event) {
@@ -66,8 +67,8 @@ Advantages of React.js
 So why should you use React.js? There are a few major benefits. First,
 abstractions allow for a more modular design. You can create
 reusable UI components as a class. These classes then create components
-in your elements. In React.js, you can build your own abstractions, rather
-than having them predefined. With a modular design, repeated or similar components
+in your elements. You can build your own abstractions in React.js. With an
+abstracted and modular design, repeated or similar components
 are easier to use within your site. This allows more flexibility and control over
 the UI. It also eases the creation of repetitive UI elements
 
@@ -139,6 +140,7 @@ examples would represent a paragraph tag using the specified font and child text
 
 .. code-block:: JavaScript
     :linenos:
+    :caption: Examples of different ways to build components
 
     // Component as a function
     const Paragraph = ({ children, font }) => ({
@@ -209,6 +211,7 @@ The previous example of a paragraph can be simplified to this:
 
 .. code-block:: jsx
     :linenos:
+    :caption: JSX simplification of a component
 
     class Paragraph extends React.Component {
         render() {
@@ -254,12 +257,12 @@ takes care of those operations for the programmer.
 Conclusion
 ----------
 
-In the end, React.js is a simple and effective way to make dynamic and
-interesting user interfaces. Through the use of components, elements, and JSX,
-a web developer can achieve professional results without the added confusion of
-the DOM. After gaining a basic understanding of the language, dynamic interfaces
-can easily be updated with easy to read and understand code. These are all reasons
-why React.js is a powerful tool for the creation and updating of user interfaces.
+React.js is a simple and effective way to make dynamic and interesting user
+interfaces. Through the use of components, elements, and JSX, a web developer
+can achieve engaging results without the added confusion of DOM interactions.
+After gaining a basic understanding of the language, dynamic interfaces can be
+updated with easy to read and understand code. These are all reasons why
+React.js is a powerful tool for the creation and updating of user interfaces.
 
 .. [#f1] Fedosejev, A., & Bush, A. (2015). React.js Essentials.
     Packt Publishing.
