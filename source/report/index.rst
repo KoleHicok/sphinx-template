@@ -1,14 +1,14 @@
 Using React.js For More Dynamic Web Pages
 =========================================
 
-Creating a user interface (UI) is a difficult task. React.js makes web apps look
-good with minimal effort. The web page becomes dynamic through animated feedback
-to user input, making site navigation more interesting. It can also easily
-display content from the server. React.js is a powerful JavaScript
-framework that allows a web developer to manipulate a web page as the user uses
-the website. React.js facilitates this creation of a single web page app, rather
-than a set of pages the user navigates through. This report will discuss the
-React.js and how it aids in the development of dynamic UI.
+Creating a user interface (UI) is a difficult task. React.js makes web apps
+engage the user with minimal effort. The web page becomes dynamic through
+animated feedback to user input, making site navigation more interesting. It can
+also easily display content from the server. This powerful JavaScript framework
+allows a web developer to manipulate a web page as the user uses the website.
+React.js facilitates the creation of a single-web page app, rather than a set of
+pages the user navigates through. Here we discuss React.js and how it aids in the
+development of a dynamic UI.
 
 .. image:: ../images/reactLogo.png
   :width: 400
@@ -41,6 +41,7 @@ elements are made up of components that provide functionality to elements. Compo
 are like functions that tell a browser how and where to load the page elements.
 
 .. code-block:: JavaScript
+    :linenos:
 
     // Without React.js and JSX
     document.addEventListener("DOMContentLoaded", function(event) {
@@ -137,6 +138,7 @@ with different tastes and styles to still use React.js comfortably. The followin
 examples would represent a paragraph tag using the specified font and child text:
 
 .. code-block:: JavaScript
+    :linenos:
 
     // Component as a function
     const Paragraph = ({ children, font }) => ({
@@ -206,6 +208,7 @@ understandable for those programming and reading the code.
 The previous example of a paragraph can be simplified to this:
 
 .. code-block:: jsx
+    :linenos:
 
     class Paragraph extends React.Component {
         render() {
