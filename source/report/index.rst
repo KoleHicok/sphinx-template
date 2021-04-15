@@ -26,11 +26,11 @@ and less than intuitive.
 
 Many companies, such as Facebook, Instagram, and Netflix, all use React because
 it is fast and easy to use. This is because it is easier for programmers to
-understand.([#f3]_) With no need for direct DOM interaction,
-programmers can use JavaScript methods to do the work for them. This results in
-a one-way data transfer from the script to the DOM. With this, the programmer
-can focus on their design instead of the DOM attributes. This means companies
-spend less time training new hires and more time developing new services.
+use.([#f3]_) With no need for direct DOM interaction, programmers can use
+JavaScript methods to do the work for them. This results in a one-way data
+transfer from the script to the DOM. With this, the programmer can focus on
+their design instead of the DOM attributes. This means companies spend less time
+training new hires and more time developing new services.
 
 When programming in React, there are a few concepts that allow easy construction
 and manipulation of the user interface. The main building blocks of
