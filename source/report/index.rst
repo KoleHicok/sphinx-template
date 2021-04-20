@@ -1,11 +1,11 @@
 Using React.js For More Dynamic Web Pages
 =========================================
 
-Creating a user interface (UI) is a difficult task. React.js makes web apps
+Creating a user interface (UI) is a difficult task. React.js helps web apps
 engage the user with minimal effort. The web page becomes dynamic through
 animated feedback to user input, making site navigation more interesting. It can
 also easily display content from the server. This powerful JavaScript framework
-allows a web developer to manipulate a web page as the user uses the website.
+allows a web developer to manipulate a web page as the user navigates the website.
 React.js enables the creation of a single-page web app, rather than a set of
 pages the user navigates through. Here we discuss React.js and how it aids in the
 development of a dynamic UI.
@@ -22,23 +22,23 @@ developed by Facebook and Instagram software architects to ease web page
 modification via JavaScript. Typical UI manipulation requires
 knowledge of the **Document Object Model** (DOM) and method calls that
 manipulate the DOM. These methods often run slowly as they refresh the entire DOM
-and less than intuitive.
+and are less than intuitive.
 
 Many companies, such as Facebook, Instagram, and Netflix, all use React because
-it is fast and easy to use. This is because it is easier for programmers to
+it is fast and efficient. This is because it is easier for programmers to
 use.([#f3]_) With no need for direct DOM interaction, programmers can use
 JavaScript methods to do the work for them. This results in a one-way data
 transfer from the script to the DOM. With this, the programmer can focus on
-their design instead of the DOM attributes. This means companies spend less time
-training new hires and more time developing new services.
+their design instead of getting and modifying DOM attributes. This means
+companies spend less time training new hires and more time developing new services.
 
 When programming in React, there are a few concepts that allow easy construction
 and manipulation of the user interface. The main building blocks of
 React are **elements** and **components**. Elements are pieces of code that represent
 changes that need to be made to the DOM. These are often written in
 **JavaScript XML** (JSX) to make the code more readable and HTML-esque. These
-elements are made up of components that provide functionality to elements. Components
-are like functions that tell a browser how and where to load the page elements.
+elements are made up of components. Components are similar to a class that tells a
+browser how and where to load the page's elements.
 
 .. code-block:: JavaScript
     :linenos:
@@ -46,19 +46,23 @@ are like functions that tell a browser how and where to load the page elements.
 
     // Without React.js and JSX
     document.addEventListener("DOMContentLoaded", function(event) {
+        // Making a new DOM element
         var paragraph = document.createParagraphElement();
+        // Modifying the new element
         paragraph.innerText = "Hello World!";
+        // Adding the new element to the DOM
         document.querySelector(".container").appendChild(paragraph);
     }
 
     // With React.js and JSX
+    // React.js pushes the entire element to the DOM in one line of code
     ReactDOM.render(<p>Hello World!</p>, document.getElementByID('root'));
 
 JSX is important as it simplifies the code from a method call for each element to
 easy to use and understandable tags.([#f1]_) By combining these concepts, the
 creation of a dynamic and reactive web page becomes a matter of adding components
 written in JSX to an element. We then render to the DOM using React's built in
-``render()`` method. This streamlined process allows companies and developers to
+``ReactDOM.render()`` method. This streamlined process allows companies and developers to
 implement React for better a user and programmer experience.
 
 Advantages of React.js
@@ -79,13 +83,13 @@ from executing scripts on your site and causing harm. While it is still a good
 idea to sanitize all data, this is an added safe guard against such attacks.
 
 Third, React.js allows for easier live updates to your UI. When a change is made,
-the programmer simply makes a ``render()`` method call with your changed component.
-React.js finds the differences and applies the needed changes to the DOM. This
-simplifies UI updates and the code needed for those updates. These changes remain
-efficient as React.js only applies the changes to the DOM. The unedited part of the
-UI remain untouched. This reduces the processing needed for any changes,
-especially smaller changes. Along with this, the user experience is smoother as
-there is no screen flicker when the DOM is emptied and repopulated.
+the programmer simply makes a ``ReactDOM.render()`` method call with your changed
+component. React.js finds the differences and applies the needed changes to the
+DOM. This simplifies UI updates and the code needed for those updates. These
+changes remain efficient as React.js only applies the changes to the DOM. The
+unedited part of the UI remain untouched. This reduces the processing needed for
+any changes, especially smaller changes. Along with this, the user experience is
+smoother as there is no screen flicker when the DOM is emptied and repopulated.
 
 The Virtual DOM
 ---------------
@@ -107,36 +111,35 @@ changes between the two virtual DOMs are then applied to the real DOM,
 preventing a refresh and the aforementioned screen flicker.
 
 The searching and changing all happens behind the scenes. This is because the
-process only needs a ``render()`` call and parameters containing the component to
-render. React.js takes it from there. This simplification makes life easier for
-a JavaScript programmer. Instead of learning about DOM calls and modifications,
-they can simply use JSX's HTML-like syntax.
+process only needs a ``ReactDOM.render()`` call and parameters containing the
+component to render. React.js takes it from there. This simplification makes life
+easier for a JavaScript programmer. Instead of learning about DOM calls and
+modifications, they can simply use JSX's HTML-like syntax.
 
 Having a program find and make changes may seem less efficient than manual
-changes, but React.js is still quite efficient. This is primarily thanks to the
+edits, but React.js is still quite efficient. This is primarily thanks to the
 virtual DOM system. Since only the needed changes are applied to the DOM, the
-whole process is quite fast. Finding the differences in the virtual DOM is fast
-too as the virtual DOM is stored in RAM for faster access. Each of these factors
-is why React.js is a highly efficient and easy to use language thanks to the
-virtual DOM.
+whole process is quite fast. Each of these factors is why React.js is an
+efficient and easy to use language or creating a positive user experience. This
+is largely in part thanks to the virtual DOM.
 
 Creating Components
 -------------------
 
-So what are these components? They are what allow for the modular and abstracted
+So what are components? They are what allow for the modular and abstracted
 UIs React.js can create. Components are similar to a class that **encapsulates**
 an element you want to create. Encapsulation is the process of creating a generalized
 version of an object that can be modified to satisfy different requirements. By
-encapsulating the more complex creation of your elements, you can easily create
+encapsulating the more generalized portions of your elements, you can easily create
 many similar elements for different needs.
 
 Encapsulation is an important part of programming in React.js. This encapsulation
-is a large part of what makes UIs easier to create expand upon in the framework.
+is largely what makes UIs easier to create expand upon in the framework.
 The components created are the blueprint for elements that will be used in the
-future. A component can be written as a function or a class that extends the
-``React.Component`` class.([#f6]_) This flexibility in notation allows for those
-with different tastes and styles to still use React.js comfortably. The following
-examples would represent a paragraph tag using the specified font and child text:
+future. A component can be written as a class that extends the ``React.Component``
+class. ([#f6]_) This flexibility in notation allows for those with different
+tastes and styles to still use React.js comfortably. The following examples would
+represent a paragraph tag using the specified font and child html:
 
 .. code-block:: JavaScript
     :linenos:
@@ -176,7 +179,7 @@ examples would represent a paragraph tag using the specified font and child text
     }
 
 These two components, written in different styles, produce the same paragraph
-with a different font and text in the paragraph tag. This allows a programmer to
+with a different font and html in the paragraph tag. This allows a programmer to
 use React.js in a way that is comfortable for them. This encapsulation makes UI
 creation simple and modular once it is in place.
 
@@ -188,7 +191,7 @@ Component creation can be further simplified with the use of JavaScript XML.
 objects.([#f5]_) It does this through its syntax that resembles HTML. The
 programmer doesn't have to understand ``React.createElement`` or React.js's object
 notation. Instead, the HTML you already know can be used in JavaScript files to
-create objects. This lowers the learning barrier for using React.js and make the
+create objects. This lowers the knowledge barrier for using React.js and makes the
 code easier to read.
 
 Since JSX is not actual JavaScript, we will need a translator to interpret the
@@ -196,16 +199,16 @@ JSX. A popular option for this is Babel. Babel is a compiler that can transform
 syntax between languages, such as JSX and React.js. Babel even has a preset for
 React.js that automatically sets up for this translation. Using Babel is as easy
 as importing it through a script tag. This can be come from a site such as
-unpkg.com.([#f4]_) Once you do this, Babel will automatically translate you JSX
+unpkg.com.([#f4]_) Once you do this, Babel will automatically translate your JSX
 into a ``React.createElement`` method call with the proper parameters.
 
 So why do we need to do all of the extra configuration to use JSX? JSX allows
-you to run JavaScript code as you create your tags. This is done using curly
+you to run JavaScript code inside of your tags. This is done using curly
 bracket (``{}``) notation.([#f4]_) This is because Babel will not modify any text
 within curly brackets. This allows access to variables and computations as you
-create components and elements. Using a ``${}`` notation gives you this same
-functionality from within a string. This makes code even more readable and
-understandable for those programming and reading the code.
+create components and elements. Using template literal notation (``${}``) gives
+you this same functionality from within a string. This makes code even more
+readable and understandable for those programming and reading the code.
 
 The previous example of a paragraph can be simplified to this:
 
@@ -234,25 +237,24 @@ Rendering Elements
 Once you are ready to render your UI to the DOM for the user to see, its time to
 create elements and render them. Elements can be created in either of the
 aforementioned ways, either by using the ``React.createElement()`` method or by
-using JSX as a parameter for a ``render()`` method call. These methods convert the
-given parameters into a JSON representation of the element that the ``render()``
-method can use. This JSON representation contains the type of HTML tag and a
-sub-object called props.
+using JSX as a parameter for a ``ReactDOM.render()`` method call. These methods
+convert the given parameters into a JSON representation of the element that the
+``ReactDOM.render()`` method can use. This JSON representation contains the type
+of HTML tag and a sub-object called props.
 
 The props object contains information about the tag (id, className, etc.) and
 the children of that tag. Elements can be made more complex HTML structures using
 the props object. These nested tags are fairly simple to make, especially when
 using JSX to make your elements. While the nested structure is easy to make, the
-DOM changes can be more complex figures and designs to make the user experience
-better.
+DOM changes remain more complex and dynamic to improve the user experience.
 
 The resulting JSON object is what React.js uses to render the UI. It first locates
-where on the UI the element will go. Then, a new virtual DOM is rendered to compare
+where in the UI the element will go. Then, a new virtual DOM is rendered to compare
 with the previous version. This comparison results in the specific changes needed
 to update the real DOM. These changes are then applied to the DOM and the UI is
-updated. This one way flow of information is much easier for programmers to
-understand and requires less knowledge about DOM operations.([#f2]_) React.js
-takes care of those operations for the programmer.
+updated. This one way flow of information is easier to understand and requires
+less knowledge about DOM interaction and attributes.([#f2]_) React.js takes care
+of those operations for the programmer.
 
 Conclusion
 ----------
